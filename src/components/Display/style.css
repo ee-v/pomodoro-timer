@@ -1,0 +1,28 @@
+.display {
+  display       : flex;
+  flex-direction: column;
+  gap           : 0.8rem;
+}
+
+.display-title {
+  font-size  : 1.8rem;
+  text-align : center;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+}
+
+.display-value {
+  font-size  : 4.2rem;
+  font-family: 'Gugi', cursive;
+  height     : 100px;
+}
+
+@media screen and (min-width:744px) {
+  .display-title {
+    font-size: 2.8rem;
+  }
+
+  .display-value {
+    font-size: 5.2rem;
+  }
+}

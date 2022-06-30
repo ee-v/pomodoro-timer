@@ -1,0 +1,27 @@
+.btn-icon {
+  padding              : 0;
+  border               : none;
+  -webkit-mask-size    : cover;
+  mask-size            : cover;
+  -webkit-mask-position: center;
+  mask-position        : center;
+  -webkit-mask-repeat  : no-repeat;
+  mask-repeat          : no-repeat;
+  height               : 48px;
+  width                : 48px;
+  background-color     : rgb(46, 46, 46);
+  display              : inline-block;
+}
+
+@media screen and (min-width:744px) {
+  .btn-icon {
+    width : 80px;
+    height: 80px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .btn-icon {
+    cursor: pointer;
+  }
+}
