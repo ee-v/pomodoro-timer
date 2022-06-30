@@ -3,12 +3,6 @@ import Control from '@components/Control';
 import Display from '@components/Display';
 import Button from '@components/Button';
 
-import UpIcon from '@assets/icons/up.svg';
-import DownIcon from '@assets/icons/down.svg';
-import PlayIcon from '@assets/icons/play.svg';
-import PauseIcon from '@assets/icons/pause.svg';
-import SkipBackIcon from '@assets/icons/skip-back.svg';
-
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -135,12 +129,12 @@ class App extends React.Component {
           <Button
             id='start_stop'
             onClick={this.playPause}
-            icon={this.state.isCounting ? PauseIcon : PlayIcon}
+            icon={this.state.isCounting ? 'pause' : 'play'}
           />
           <Button
             id='reset'
             onClick={this.reset}
-            icon={SkipBackIcon}
+            icon='reset'
           />
           <audio id='beep' src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav"
             preload="auto"></audio>
@@ -151,10 +145,10 @@ class App extends React.Component {
             label='Break Length'
             idButtonOne='break-decrement'
             funcOne={this.decrementBreak}
-            iconOne={DownIcon}
+            iconOne='down'
             idButtonTwo='break-increment'
             funcTwo={this.incrementBreak}
-            iconTwo={UpIcon}
+            iconTwo='up'
             idValue='break-length'
             value={this.state.breakLength}
           />
@@ -163,10 +157,10 @@ class App extends React.Component {
             label='Session Length'
             idButtonOne='session-decrement'
             funcOne={this.decrementSession}
-            iconOne={DownIcon}
+            iconOne='down'
             idButtonTwo='session-increment'
             funcTwo={this.incrementSession}
-            iconTwo={UpIcon}
+            iconTwo='up'
             idValue='session-length'
             value={this.state.sessionLength}
           />

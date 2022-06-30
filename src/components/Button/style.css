@@ -1,27 +1,49 @@
 .btn-icon {
-  padding              : 0;
-  border               : none;
-  -webkit-mask-size    : cover;
-  mask-size            : cover;
-  -webkit-mask-position: center;
-  mask-position        : center;
-  -webkit-mask-repeat  : no-repeat;
-  mask-repeat          : no-repeat;
-  height               : 48px;
-  width                : 48px;
-  background-color     : rgb(46, 46, 46);
-  display              : inline-block;
+  display           : inline-block;
+  text-decoration   : none;
+  border            : none;
+  background-color  : transparent;
+  -webkit-appearance: none;
+  -moz-appearance   : none;
+  transition        : transform 100ms ease-out;
+  padding           : 0;
+  margin            : 0;
+  display           : flex;
+  align-items       : center;
+  justify-content   : center;
+}
+
+.btn-icon:focus {
+  outline-offset: -4px;
+  border-radius : 99em;
+}
+
+.btn-icon:active {
+  transform: scale(0.9);
+}
+
+.icon {
+  height: 58px;
+  width : 58px;
+  color : rgb(46, 46, 46);
 }
 
 @media screen and (min-width:744px) {
-  .btn-icon {
-    width : 80px;
-    height: 80px;
+
+  .btn-icon,
+  .icon {
+    width : 90px;
+    height: 90px;
   }
 }
 
 @media screen and (min-width:1024px) {
   .btn-icon {
     cursor: pointer;
+  }
+
+  .btn-icon:hover {
+    border-radius: 99em;
+    outline      : 2px solid rgb(255, 255, 255);
   }
 }
